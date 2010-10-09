@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, AdventureUrban!</string>
+    
     <string name="app_name">Adventure Urban</string>
+<string name="menu_options_adventures">Adventures</string><string name="menu_options_create">Create</string><string name="menu_options_profile">Profile</string>
+<string name="layout_create_comingsoon">Coming soon! For now please visit adventureurban.com</string>
 </resources>
