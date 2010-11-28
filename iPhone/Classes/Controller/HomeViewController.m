@@ -131,17 +131,18 @@
 		return;
 	}
 	
-	/*
 	if (adventureViewController == nil) {
-		AdventureViewController *adventureViewController = [[AdventureViewController alloc] initWithNibName:@"AdventureView" bundle:nil];
-		[self setAislesViewController:adventureViewController];
-		[adventureViewController release];
+		AdventureViewController *adventureViewControllerCreated = [[AdventureViewController alloc] initWithNibName:@"AdventureView" bundle:nil];
+		[self setAdventureViewController:adventureViewControllerCreated];
+		[adventureViewControllerCreated release];
 	}
 	
 	[adventuresView deselectRowAtIndexPath:indexPath animated:YES];
+	Adventure* adventure = [datamanager getAdventureByName:@"Churchills Legacy"];
+	[AdventureViewController configureWithAdventure:adventure];
 	
 	AdventureUrbanAppDelegate *appDelegate = (AdventureUrbanAppDelegate *)[[UIApplication sharedApplication] delegate];
-	[[appDelegate homeViewController] pushViewController:self.adventureViewController animated:YES];*/
+	[[appDelegate homeViewController] pushViewController:self.adventureViewController animated:YES];
 }
 
 - (void)notAvailable {

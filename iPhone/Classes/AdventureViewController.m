@@ -7,6 +7,12 @@
 //
 
 #import "AdventureViewController.h"
+#import "AdventureUrbanAppDelegate.h"
+
+/* Static class fields */
+static NSArray* __currentAdventureSteps__;
+static AdventureStep* __currentAdventureStep__;
+static NSInteger __currentAdventureStepNumber__;
 
 @implementation AdventureViewController
 
@@ -43,39 +49,36 @@
 
 - (void) viewDidAppear:(BOOL)animated
 {
- 	switch (step.stepType) {
+	[super viewDidAppear:animated];
+	
+ 	switch ([__currentAdventureStep__ stepType]) {
         case STEP_REWARD_AUDIO:
-            [step playAudio];
+            [__currentAdventureStep__ playAudio];
             break;
         default:break;
     }
 }
 
-- (void)configureWithStep:(AdventureStep *)inAdventureStep 
-                          andWithNextStepController:(AdventureViewController *) inNextStep
-{
-    step = inAdventureStep;
-    [step retain];
-    nextStepController = inNextStep;
-    [nextStepController retain];
-    
+- (void) viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	
 	UIImage *loadedImage;
 	
-	switch (step.stepType) {
+	switch ([__currentAdventureStep__ stepType]) {
         case STEP_INTRO:
-            [adventureIntroduction setText:step.introductionText];
+            [adventureIntroduction setText:[__currentAdventureStep__ introductionText]];
             [adventureIntroduction setHidden:NO];
-            [adventureSummaryLeft setText:step.summaryLeftText];
+            [adventureSummaryLeft setText:[__currentAdventureStep__ summaryLeftText]];
             [adventureSummaryLeft setHidden:NO];
-            [adventureSummaryRight setText:step.summaryRightText];
+            [adventureSummaryRight setText:[__currentAdventureStep__ summaryRightText]];
             [adventureSummaryRight setHidden:NO];
             [smallStartButton setHidden:NO];
             [bigGreenButton setTitle:@"Start" forState:UIControlStateNormal];
             break;
         case STEP_STANDARD:
-            [stepText setText:step.stepText];
+            [stepText setText:[__currentAdventureStep__ stepText]];
             [stepText setHidden:NO];
-            [stepText setText:step.answerText];
+            [stepText setText:[__currentAdventureStep__ answerText]];
             [answerInput setHidden:NO];
             [bigGreenButton setTitle:@"Next" forState:UIControlStateNormal];
             break;
@@ -93,9 +96,9 @@
             [bigGreenButton setTitle:@"Thanks!" forState:UIControlStateNormal];
             break;
         case STEP_SUMMARY:
-            [summaryTextLeft setText:step.summaryLeftText];
+            [summaryTextLeft setText:[__currentAdventureStep__ summaryLeftText]];
             [summaryTextLeft setHidden:NO];
-            [summaryTextRight setText:step.summaryRightText];
+            [summaryTextRight setText:[__currentAdventureStep__ summaryRightText]];
             [summaryTextRight setHidden:NO];
             [socialButton setHidden:NO];
             [voucherButton setHidden:NO];
@@ -104,7 +107,12 @@
         default:
             break;
     }
-	
+}
+
++ (void)configureWithAdventure:(Adventure *)inAdventure {
+	__currentAdventureSteps__ = [inAdventure getAdventureSteps];
+	__currentAdventureStepNumber__ = 0;
+	__currentAdventureStep__ = [__currentAdventureSteps__ objectAtIndex:__currentAdventureStepNumber__];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -125,9 +133,29 @@
     [super dealloc];
 }
 
-- (IBAction)bigGreenPressed:(id)sender{}
-- (IBAction)littleStartPressed:(id)sender{}
-- (IBAction)voucherClicked:(id)sender{}
+- (IBAction)bigGreenPressed:(id)sender{
+	__currentAdventureStepNumber__ = 1;
+	__currentAdventureStep__ = [__currentAdventureSteps__ objectAtIndex:__currentAdventureStepNumber__];
+	AdventureViewController *adventureViewController = [[AdventureViewController alloc] initWithNibName:@"AdventureView" bundle:nil];
+	AdventureUrbanAppDelegate *appDelegate = (AdventureUrbanAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[[appDelegate homeViewController] pushViewController:adventureViewController animated:YES];
+}
+
+- (IBAction)littleStartPressed:(id)sender{
+	__currentAdventureStepNumber__ = 1;
+	__currentAdventureStep__ = [__currentAdventureSteps__ objectAtIndex:__currentAdventureStepNumber__];
+	AdventureViewController *adventureViewController = [[AdventureViewController alloc] initWithNibName:@"AdventureView" bundle:nil];
+	AdventureUrbanAppDelegate *appDelegate = (AdventureUrbanAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[[appDelegate homeViewController] pushViewController:adventureViewController animated:YES];	
+}
+
+
+- (IBAction)voucherClicked:(id)sender{
+	NSURL *url = [NSURL URLWithString:@"http://www.amazon.com/Memoirs-Second-World-Abridgement-Volumes/dp/0395599687/ref=sr_1_4?s=books&ie=UTF8&qid=1290949338&sr=1-4"];
+	[[UIApplication sharedApplication] openURL:url];
+}
+
+
 - (IBAction)socialClicked:(id)sender{}
 
 @end

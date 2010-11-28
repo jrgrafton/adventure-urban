@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIView-Extended.h"
 #import "AdventureStep.h"
+#import "Adventure.h"
 
 @interface AdventureViewController : UIViewController {
 	/* Intro Screen */
@@ -32,10 +33,6 @@
 	
 	/* Every Screen */
 	IBOutlet UIButton *bigGreenButton;
-	
-	@private
-	AdventureViewController* nextStepController;
-    AdventureStep* step;
 }
 
 /* IB Actions */
@@ -44,8 +41,7 @@
 - (IBAction)voucherClicked:(id)sender;
 - (IBAction)socialClicked:(id)sender;
 
-- (void)configureWithStep:(AdventureStep *)inAdventureStep 
-                           andWithNextStepController:(AdventureViewController *) inNextStep;
++ (void)configureWithAdventure:(Adventure *)inAdventure;
 
 
 @end
