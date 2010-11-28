@@ -78,7 +78,6 @@ static NSInteger __currentAdventureStepNumber__;
         case STEP_STANDARD:
             [stepText setText:[__currentAdventureStep__ stepText]];
             [stepText setHidden:NO];
-            [stepText setText:[__currentAdventureStep__ answerText]];
             [answerInput setHidden:NO];
             [bigGreenButton setTitle:@"Next" forState:UIControlStateNormal];
             break;
@@ -89,16 +88,14 @@ static NSInteger __currentAdventureStepNumber__;
             [bigGreenButton setTitle:@"Thanks!" forState:UIControlStateNormal];
             break;
         case STEP_REWARD_MOVIE:
-            loadedImage = [UIImage imageNamed: @"reward_movie.png"];
+            loadedImage = [UIImage imageNamed: @"reward_video.png"];
             [rewardImage setImage:loadedImage];
             [rewardImage setHidden:NO];
             /*TODO: Load video controller here */
             [bigGreenButton setTitle:@"Thanks!" forState:UIControlStateNormal];
             break;
         case STEP_SUMMARY:
-            [summaryTextLeft setText:[__currentAdventureStep__ summaryLeftText]];
             [summaryTextLeft setHidden:NO];
-            [summaryTextRight setText:[__currentAdventureStep__ summaryRightText]];
             [summaryTextRight setHidden:NO];
             [socialButton setHidden:NO];
             [voucherButton setHidden:NO];
@@ -110,7 +107,7 @@ static NSInteger __currentAdventureStepNumber__;
 }
 
 + (void)configureWithAdventure:(Adventure *)inAdventure {
-	__currentAdventureSteps__ = [inAdventure getAdventureSteps];
+	__currentAdventureSteps__ = inAdventure.adventureSteps;
 	__currentAdventureStepNumber__ = 0;
 	__currentAdventureStep__ = [__currentAdventureSteps__ objectAtIndex:__currentAdventureStepNumber__];
 }
@@ -134,15 +131,23 @@ static NSInteger __currentAdventureStepNumber__;
 }
 
 - (IBAction)bigGreenPressed:(id)sender{
-	__currentAdventureStepNumber__ = 1;
-	__currentAdventureStep__ = [__currentAdventureSteps__ objectAtIndex:__currentAdventureStepNumber__];
-	AdventureViewController *adventureViewController = [[AdventureViewController alloc] initWithNibName:@"AdventureView" bundle:nil];
-	AdventureUrbanAppDelegate *appDelegate = (AdventureUrbanAppDelegate *)[[UIApplication sharedApplication] delegate];
-	[[appDelegate homeViewController] pushViewController:adventureViewController animated:YES];
+	__currentAdventureStepNumber__++;
+    if ( __currentAdventureStepNumber__ < [__currentAdventureSteps__ count] )
+    {
+        __currentAdventureStep__ = [__currentAdventureSteps__ objectAtIndex:__currentAdventureStepNumber__];
+        AdventureViewController *adventureViewController = [[AdventureViewController alloc] initWithNibName:@"AdventureView" bundle:nil];
+        AdventureUrbanAppDelegate *appDelegate = (AdventureUrbanAppDelegate *)[[UIApplication sharedApplication] delegate];
+        [[appDelegate homeViewController] pushViewController:adventureViewController animated:YES];
+    }
+    else {
+        AdventureUrbanAppDelegate *appDelegate = (AdventureUrbanAppDelegate *)[[UIApplication sharedApplication] delegate];
+        [[appDelegate homeViewController] popToRootViewControllerAnimated: YES];
+    }
+
 }
 
 - (IBAction)littleStartPressed:(id)sender{
-	__currentAdventureStepNumber__ = 1;
+	__currentAdventureStepNumber__++;;
 	__currentAdventureStep__ = [__currentAdventureSteps__ objectAtIndex:__currentAdventureStepNumber__];
 	AdventureViewController *adventureViewController = [[AdventureViewController alloc] initWithNibName:@"AdventureView" bundle:nil];
 	AdventureUrbanAppDelegate *appDelegate = (AdventureUrbanAppDelegate *)[[UIApplication sharedApplication] delegate];
