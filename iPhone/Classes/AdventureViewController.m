@@ -41,6 +41,16 @@
 }
 */
 
+- (void) viewDidAppear:(BOOL)animated
+{
+ 	switch (step.stepType) {
+        case STEP_REWARD_AUDIO:
+            [step playAudio];
+            break;
+        default:break;
+    }
+}
+
 - (void)configureWithStep:(AdventureStep *)inAdventureStep 
                           andWithNextStepController:(AdventureViewController *) inNextStep
 {
