@@ -44,7 +44,6 @@
 		CE76B6A512A212260067015C /* churchill_adventure.png in Resources */ = {isa = PBXBuildFile; fileRef = CE76B6A112A212260067015C /* churchill_adventure.png */; };
 		CE76B6A612A212260067015C /* jack_adventure.png in Resources */ = {isa = PBXBuildFile; fileRef = CE76B6A212A212260067015C /* jack_adventure.png */; };
 		CE76B6CC12A2191B0067015C /* AdventureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */; };
-		CE76B6CE12A2194C0067015C /* Adventure.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE76B6CD12A2194C0067015C /* Adventure.xib */; };
 		CE76B6D312A21A440067015C /* adventure_back.png in Resources */ = {isa = PBXBuildFile; fileRef = CE76B6CF12A21A440067015C /* adventure_back.png */; };
 		CE76B6D412A21A440067015C /* adventure_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE76B6D012A21A440067015C /* adventure_back@2x.png */; };
 		CE76B6D512A21A440067015C /* churchill_adventure_top.png in Resources */ = {isa = PBXBuildFile; fileRef = CE76B6D112A21A440067015C /* churchill_adventure_top.png */; };
@@ -79,6 +78,7 @@
 		F95E3E7D12A27A53005EB53E /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E3E7512A27A53005EB53E /* SBJsonBase.m */; };
 		F95E3E7E12A27A53005EB53E /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E3E7712A27A53005EB53E /* SBJsonParser.m */; };
 		F95E3E7F12A27A53005EB53E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E3E7912A27A53005EB53E /* SBJsonWriter.m */; };
+		F9CDD0A712A290A10007DA58 /* AdventureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD0A612A290A10007DA58 /* AdventureView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,7 +128,6 @@
 		CE76B6A212A212260067015C /* jack_adventure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jack_adventure.png; sourceTree = "<group>"; };
 		CE76B6CA12A2191B0067015C /* AdventureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdventureViewController.h; sourceTree = "<group>"; };
 		CE76B6CB12A2191B0067015C /* AdventureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdventureViewController.m; sourceTree = "<group>"; };
-		CE76B6CD12A2194C0067015C /* Adventure.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Adventure.xib; sourceTree = "<group>"; };
 		CE76B6CF12A21A440067015C /* adventure_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adventure_back.png; sourceTree = "<group>"; };
 		CE76B6D012A21A440067015C /* adventure_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adventure_back@2x.png"; sourceTree = "<group>"; };
 		CE76B6D112A21A440067015C /* churchill_adventure_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = churchill_adventure_top.png; sourceTree = "<group>"; };
@@ -173,6 +172,7 @@
 		F95E3E7712A27A53005EB53E /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		F95E3E7812A27A53005EB53E /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		F95E3E7912A27A53005EB53E /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		F9CDD0A612A290A10007DA58 /* AdventureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdventureView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,11 +278,11 @@
 		3EB5D0C4125F79F5009A80E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F9CDD0A612A290A10007DA58 /* AdventureView.xib */,
 				3EB5D4EF1268AB29009A80E0 /* HomeView.xib */,
 				3EB5D4F01268AB29009A80E0 /* MainWindow.xib */,
 				3EB5D4FD1268AB29009A80E0 /* AdventureCell.xib */,
 				CE76B60012A1FC790067015C /* AdventureCellHeader.xib */,
-				CE76B6CD12A2194C0067015C /* Adventure.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -476,7 +476,6 @@
 				CE76B6A412A212260067015C /* beatles_adventure.png in Resources */,
 				CE76B6A512A212260067015C /* churchill_adventure.png in Resources */,
 				CE76B6A612A212260067015C /* jack_adventure.png in Resources */,
-				CE76B6CE12A2194C0067015C /* Adventure.xib in Resources */,
 				CE76B6D312A21A440067015C /* adventure_back.png in Resources */,
 				CE76B6D412A21A440067015C /* adventure_back@2x.png in Resources */,
 				CE76B6D512A21A440067015C /* churchill_adventure_top.png in Resources */,
@@ -494,6 +493,7 @@
 				CE76B6ED12A221AB0067015C /* voucher.png in Resources */,
 				CE76B6EE12A221AB0067015C /* voucher@2x.png in Resources */,
 				CE7D9C7112A26CA0001245EB /* adventures.json in Resources */,
+				F9CDD0A712A290A10007DA58 /* AdventureView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
