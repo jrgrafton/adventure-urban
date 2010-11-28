@@ -264,6 +264,7 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>3EB5D0C4125F79F5009A80E0</string>
 								<string>3EB5D0C5125F79FF009A80E0</string>
 								<string>3EB5D0C3125F79E0009A80E0</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
@@ -276,14 +277,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>3</integer>
-									<integer>1</integer>
+									<integer>39</integer>
+									<integer>32</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {244, 596}}</string>
+							<string>{{0, 373}, {244, 596}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -313,14 +313,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AdventureViewController.m</string>
+								<string>AdventureUrban-Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AdventureViewController.m</string>
+										<string>AdventureUrban-Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CE7D9DA112A28B89001245EB</string>
+										<string>CE7D9DAA12A290E7001245EB</string>
 										<key>history</key>
 										<array>
 											<string>CE76B64512A20E480067015C</string>
@@ -341,7 +339,6 @@
 											<string>CE76B64B12A20E480067015C</string>
 											<string>CE76B65212A20E480067015C</string>
 											<string>CE7D9D9312A28B89001245EB</string>
-											<string>CE7D9D9412A28B89001245EB</string>
 											<string>CE7D9D9512A28B89001245EB</string>
 											<string>CE7D9D9612A28B89001245EB</string>
 											<string>CE7D9D9712A28B89001245EB</string>
@@ -353,7 +350,11 @@
 											<string>CE7D9D9D12A28B89001245EB</string>
 											<string>CE7D9D9E12A28B89001245EB</string>
 											<string>CE7D9D9F12A28B89001245EB</string>
-											<string>CE7D9DA012A28B89001245EB</string>
+											<string>CE7D9DA512A290E7001245EB</string>
+											<string>CE7D9DA612A290E7001245EB</string>
+											<string>CE7D9DA712A290E7001245EB</string>
+											<string>CE7D9DA812A290E7001245EB</string>
+											<string>CE7D9DA912A290E7001245EB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

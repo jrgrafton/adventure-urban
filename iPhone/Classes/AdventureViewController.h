@@ -11,7 +11,7 @@
 #import "AdventureStep.h"
 #import "Adventure.h"
 
-@interface AdventureViewController : UIViewController {
+@interface AdventureViewController : UIViewController <UITextFieldDelegate> {
 	/* Intro Screen */
 	IBOutlet UILabel *adventureIntroduction;
 	IBOutlet UILabel *adventureSummaryLeft;

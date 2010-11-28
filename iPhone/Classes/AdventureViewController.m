@@ -67,6 +67,7 @@ static NSInteger __currentAdventureStepNumber__;
 	switch ([__currentAdventureStep__ stepType]) {
         case STEP_INTRO:
             [adventureIntroduction setText:[__currentAdventureStep__ introductionText]];
+			[adventureIntroduction alignTop];
             [adventureIntroduction setHidden:NO];
             [adventureSummaryLeft setText:[__currentAdventureStep__ summaryLeftText]];
             [adventureSummaryLeft setHidden:NO];
@@ -76,7 +77,12 @@ static NSInteger __currentAdventureStepNumber__;
             [bigGreenButton setTitle:@"Start" forState:UIControlStateNormal];
             break;
         case STEP_STANDARD:
+			[adventureIntroduction setHidden:YES];
+			[adventureSummaryLeft setHidden:YES];
+			[adventureSummaryRight setHidden:YES];
+			
             [stepText setText:[__currentAdventureStep__ stepText]];
+			[stepText alignTop];
             [stepText setHidden:NO];
             [answerInput setHidden:NO];
             [bigGreenButton setTitle:@"Next" forState:UIControlStateNormal];
@@ -134,11 +140,22 @@ static NSInteger __currentAdventureStepNumber__;
 	__currentAdventureStepNumber__++;
     if ( __currentAdventureStepNumber__ < [__currentAdventureSteps__ count] )
     {
+		if ([__currentAdventureStep__ stepType] == STEP_STANDARD) {
+			NSString *correctAnswer = [[__currentAdventureStep__ answerText] lowercaseString];
+			NSString *userAnswer = [[answerInput text] lowercaseString];
+			if (![correctAnswer isEqualToString:userAnswer]) {
+				UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Buffoonery!" message:@"We shall never overcome with answers such as that!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+				[successAlert show];
+				[successAlert release];
+				return;
+			}
+		}
         __currentAdventureStep__ = [__currentAdventureSteps__ objectAtIndex:__currentAdventureStepNumber__];
         AdventureViewController *adventureViewController = [[AdventureViewController alloc] initWithNibName:@"AdventureView" bundle:nil];
         AdventureUrbanAppDelegate *appDelegate = (AdventureUrbanAppDelegate *)[[UIApplication sharedApplication] delegate];
         [[appDelegate homeViewController] pushViewController:adventureViewController animated:YES];
     }
+	/* We are at end of adventure */
     else {
         AdventureUrbanAppDelegate *appDelegate = (AdventureUrbanAppDelegate *)[[UIApplication sharedApplication] delegate];
         [[appDelegate homeViewController] popToRootViewControllerAnimated: YES];
@@ -162,5 +179,12 @@ static NSInteger __currentAdventureStepNumber__;
 
 
 - (IBAction)socialClicked:(id)sender{}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[answerInput becomeFirstResponder];
+    [answerInput resignFirstResponder];
+    return YES;
+}
 
 @end
