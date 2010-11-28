@@ -62,6 +62,12 @@ static NSInteger __currentAdventureStepNumber__;
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
+	if (__currentAdventureStepNumber__ != 1) {
+		self.navigationItem.hidesBackButton = FALSE;
+	}else{
+		self.navigationItem.hidesBackButton = TRUE;
+	}
+	
 	UIImage *loadedImage;
 	
 	switch ([__currentAdventureStep__ stepType]) {
@@ -144,7 +150,7 @@ static NSInteger __currentAdventureStepNumber__;
 			NSString *correctAnswer = [[__currentAdventureStep__ answerText] lowercaseString];
 			NSString *userAnswer = [[answerInput text] lowercaseString];
 			if (![correctAnswer isEqualToString:userAnswer]) {
-				UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Buffoonery!" message:@"We shall never overcome with answers such as that!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+				UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Buffoonery" message:@"We shall never overcome with answers such as that!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 				[successAlert show];
 				[successAlert release];
 				return;

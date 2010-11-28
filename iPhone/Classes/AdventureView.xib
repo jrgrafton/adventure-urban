@@ -222,7 +222,7 @@ dGFydGluZyBMb2NhdGlvbjoKCgo</string>
 					<object class="IBUILabel" id="694552638">
 						<reference key="NSNextResponder" ref="155334720"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{9, 90}, {828, 120}}</string>
+						<string key="NSFrame">{{9, 90}, {303, 120}}</string>
 						<reference key="NSSuperview" ref="155334720"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -678,7 +678,7 @@ dGFydGluZyBMb2NhdGlvbjoKCgo</string>
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABCIAAAw5kAAA</bytes>
 					</object>
-					<string>{{307, 379}, {320, 370}}</string>
+					<string>{{378, 164}, {320, 370}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

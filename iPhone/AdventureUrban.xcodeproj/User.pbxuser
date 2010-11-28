@@ -14,7 +14,7 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = CE76B5B912A1EE070067015C /* AdventureUrban */;
 		activeSDKPreference = iphonesimulator4.1;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* AdventureUrban */;
@@ -328,16 +328,16 @@
 	};
 	3EB5D51B1268AB3D009A80E0 /* HomeViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {953, 446}}";
+			sepNavIntBoundsRect = "{{0, 0}, {953, 441}}";
 			sepNavSelRange = "{586, 23}";
 			sepNavVisRange = "{0, 617}";
 		};
 	};
 	3EB5D51C1268AB3D009A80E0 /* HomeViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1300, 2431}}";
-			sepNavSelRange = "{5232, 214}";
-			sepNavVisRange = "{4538, 1413}";
+			sepNavIntBoundsRect = "{{0, 0}, {1300, 2470}}";
+			sepNavSelRange = "{5473, 228}";
+			sepNavVisRange = "{5020, 1093}";
 			sepNavWindowFrame = "{{15, 223}, {1133, 650}}";
 		};
 	};
@@ -467,23 +467,23 @@
 	};
 	3EB5D56E1268AB4C009A80E0 /* AdventureUrbanAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {951, 1560}}";
+			sepNavIntBoundsRect = "{{0, 0}, {953, 1586}}";
 			sepNavSelRange = "{452, 18}";
-			sepNavVisRange = "{0, 1122}";
+			sepNavVisRange = "{0, 1086}";
 		};
 	};
 	3EB5D56F1268AB4C009A80E0 /* UIImage-Extended.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1045, 471}}";
+			sepNavIntBoundsRect = "{{0, 0}, {953, 441}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 512}";
 		};
 	};
 	3EB5D5701268AB4C009A80E0 /* UIImage-Extended.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1356, 1716}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1349, 1807}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1303}";
+			sepNavVisRange = "{0, 1166}";
 		};
 	};
 	CE6E010B129DC60A00267716 /* PBXTextBookmark */ = {
@@ -614,7 +614,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 			"PBXLSLaunchAction-0" = {
 				PBXLSLaunchAction = 0;
@@ -758,21 +758,22 @@
 	};
 	CE76B6CA12A2191B0067015C /* AdventureViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {953, 637}}";
-			sepNavSelRange = "{241, 0}";
-			sepNavVisRange = "{0, 851}";
+			sepNavIntBoundsRect = "{{0, 0}, {953, 624}}";
+			sepNavSelRange = "{577, 11}";
+			sepNavVisRange = "{142, 912}";
 		};
 	};
 	CE76B6CB12A2191B0067015C /* AdventureViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1188, 1989}}";
-			sepNavSelRange = "{5488, 0}";
-			sepNavVisRange = "{4328, 1511}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = statements;\n            r = \"{4867, 14}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 6612}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {971, 2314}}";
+			sepNavSelRange = "{4817, 0}";
+			sepNavVisRange = "{4253, 1362}";
 		};
 	};
 	CE76B6EF12A2238F0067015C /* UIView-Extended.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1045, 494}}";
+			sepNavIntBoundsRect = "{{0, 0}, {953, 441}}";
 			sepNavSelRange = "{265, 0}";
 			sepNavVisRange = "{0, 266}";
 		};
@@ -805,7 +806,7 @@
 		comments = "Expected expression before 'UIImage'";
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		rLen = 0;
-		rLoc = 115;
+		rLoc = 127;
 		rType = 1;
 	};
 	CE76B72512A236290067015C /* PBXTextBookmark */ = {
@@ -913,7 +914,7 @@
 		fRef = CE76B6CA12A2191B0067015C /* AdventureViewController.h */;
 		name = "AdventureViewController.h: 68";
 		rLen = 0;
-		rLoc = 1096;
+		rLoc = 1118;
 		rType = 0;
 		vrLen = 830;
 		vrLoc = 0;
@@ -923,7 +924,7 @@
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		name = "AdventureViewController.m: 80";
 		rLen = 0;
-		rLoc = 4102;
+		rLoc = 4442;
 		rType = 0;
 		vrLen = 1323;
 		vrLoc = 1220;
@@ -982,8 +983,8 @@
 	CE7D9C7012A26CA0001245EB /* adventures.json */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {953, 481}}";
-			sepNavSelRange = "{63, 17}";
-			sepNavVisRange = "{0, 1132}";
+			sepNavSelRange = "{357, 21}";
+			sepNavVisRange = "{0, 1121}";
 			sepNavWindowFrame = "{{37, 193}, {750, 558}}";
 		};
 	};
@@ -1030,7 +1031,7 @@
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		name = "AdventureViewController.m: 80";
 		rLen = 0;
-		rLoc = 4102;
+		rLoc = 4442;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 1043;
@@ -1092,7 +1093,7 @@
 		rLen = 0;
 		rLoc = 253;
 		rType = 0;
-		vrLen = 649;
+		vrLen = 492;
 		vrLoc = 604;
 	};
 	CE7D9C9612A27405001245EB /* PBXTextBookmark */ = {
@@ -1556,7 +1557,7 @@
 		comments = "Lvalue required as left operand of assignment";
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		rLen = 1;
-		rLoc = 148;
+		rLoc = 171;
 		rType = 1;
 	};
 	CE7D9D6A12A2874F001245EB /* PBXTextBookmark */ = {
@@ -1564,7 +1565,7 @@
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		name = "AdventureViewController.m: 134";
 		rLen = 39;
-		rLoc = 5017;
+		rLoc = 5936;
 		rType = 0;
 		vrLen = 279;
 		vrLoc = 4143;
@@ -1574,7 +1575,7 @@
 		comments = "Passing argument 1 of 'objectAtIndex:' makes integer from pointer without a cast";
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		rLen = 1;
-		rLoc = 114;
+		rLoc = 126;
 		rType = 1;
 	};
 	CE7D9D7612A2881A001245EB /* PBXTextBookmark */ = {
@@ -1582,7 +1583,7 @@
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		name = "AdventureViewController.m: 112";
 		rLen = 0;
-		rLoc = 3920;
+		rLoc = 4260;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 3607;
@@ -1592,7 +1593,7 @@
 		comments = "Passing argument 1 of 'objectAtIndex:' makes integer from pointer without a cast";
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		rLen = 1;
-		rLoc = 114;
+		rLoc = 126;
 		rType = 1;
 	};
 	CE7D9D7C12A2882F001245EB /* PBXTextBookmark */ = {
@@ -1600,7 +1601,7 @@
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		name = "AdventureViewController.m: 114";
 		rLen = 0;
-		rLoc = 3999;
+		rLoc = 4339;
 		rType = 0;
 		vrLen = 577;
 		vrLoc = 3607;
@@ -1610,7 +1611,7 @@
 		comments = "Passing argument 1 of 'objectAtIndex:' makes integer from pointer without a cast";
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		rLen = 1;
-		rLoc = 114;
+		rLoc = 126;
 		rType = 1;
 	};
 	CE7D9D8812A2890B001245EB /* PBXTextBookmark */ = {
@@ -1752,7 +1753,7 @@
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		name = "AdventureViewController.m: 145";
 		rLen = 0;
-		rLoc = 5535;
+		rLoc = 6454;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 4199;
@@ -1762,7 +1763,7 @@
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		name = "AdventureViewController.m: 149";
 		rLen = 0;
-		rLoc = 5488;
+		rLoc = 6407;
 		rType = 0;
 		vrLen = 1511;
 		vrLoc = 4328;
@@ -1772,7 +1773,7 @@
 		fRef = CE76B6CB12A2191B0067015C /* AdventureViewController.m */;
 		name = "AdventureViewController.m: 80";
 		rLen = 0;
-		rLoc = 4102;
+		rLoc = 4442;
 		rType = 0;
 		vrLen = 1450;
 		vrLoc = 1126;
@@ -1800,9 +1801,9 @@
 	};
 	F95E3E6A12A27A35005EB53E /* DataManager.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {953, 1001}}";
+			sepNavIntBoundsRect = "{{0, 0}, {953, 2366}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 770}";
+			sepNavVisRange = "{190, 725}";
 		};
 	};
 }
