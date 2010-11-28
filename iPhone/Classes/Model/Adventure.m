@@ -14,18 +14,44 @@
 @synthesize adventureLocation;
 @synthesize adventureSolvedByText;
 @synthesize adventureImage;
+@synthesize adventureSteps;
 
 - (id)initWithAdventureTitle:(NSString *)inAdventureTitle andAdventureLocation:(NSString *)inAdventureLocation 
-	 andAdventureSolvedByText:(NSString *)inAdventureSolvedByText andAdventureImage:(UIImage *)inAdventureImage {
+	 andAdventureSolvedByText:(NSString *)inAdventureSolvedByText andAdventureImage:(UIImage *)inAdventureImage
+     andSteps: (NSArray*) steps{
 	
 	if (self = [super init]) {
 		[self setAdventureTitle:inAdventureTitle];
 		[self setAdventureLocation:inAdventureLocation];
 		[self setAdventureSolvedByText:inAdventureSolvedByText];
 		[self setAdventureImage:inAdventureImage];
+        [self setAdventureSteps: steps];
 	}
 	
 	return self;
+}
+
+- (id)initWithAdventureTitle:(NSString *)inAdventureTitle andAdventureLocation:(NSString *)inAdventureLocation 
+    andAdventureSolvedByText:(NSString *)inAdventureSolvedByText andAdventureImage:(UIImage *)inAdventureImage
+{	
+	if (self = [super init]) {
+		[self setAdventureTitle:inAdventureTitle];
+		[self setAdventureLocation:inAdventureLocation];
+		[self setAdventureSolvedByText:inAdventureSolvedByText];
+		[self setAdventureImage:inAdventureImage];
+        [self setAdventureSteps: nil];
+	}
+	
+	return self;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat: @"\nTitle: %@\nLocation:%@\nSolvedBy:%@\nImageURL:%@\nSteps:%@\n", adventureTitle,
+            adventureLocation,
+            adventureSolvedByText,
+            adventureImage,
+            adventureSteps];
 }
 
 - (void)dealloc {
@@ -33,6 +59,7 @@
 	[adventureLocation release];
 	[adventureSolvedByText release];
 	[adventureImage release];
+    [adventureSteps release];
 	
 	[super dealloc];
 }

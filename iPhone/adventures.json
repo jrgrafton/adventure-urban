@@ -16,7 +16,7 @@
                     "answerText": "SECRET" 
                 },
                 {
-                    "stepType": 3,
+                    "stepType": 2,
                     "resourceName": "speech.mp3" 
                 },
                 {
@@ -25,11 +25,11 @@
                     "answerText": "SS" 
                 },
                 {
-                    "stepType": 4,
+                    "stepType": 3,
                     "resourceName": "movie.mpg" 
                 },
                 {
-                    "stepType": 5 
+                    "stepType": 4 
                 } 
             ] 
         } 

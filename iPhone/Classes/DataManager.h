@@ -10,15 +10,14 @@
 #import "Adventure.h"
 
 @interface DataManager : NSObject {
-	
+	@private
+    NSMutableDictionary *adventures;
 }
 
 + (DataManager *)getInstance;
 
 - (id)init;
 - (void)uninitialiseAll;
-
-
 
 - (void)loadAdventures:(NSString *) fileName;
 - (Adventure *)getAdventureByName:(NSString *) adventureName;

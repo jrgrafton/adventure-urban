@@ -10,17 +10,21 @@
 #import "AdventureStep.h"
 
 @interface Adventure : NSObject {
-
 }
 
 @property (readwrite,copy) NSString *adventureTitle;
 @property (readwrite,copy) NSString *adventureLocation;
 @property (readwrite,copy) NSString *adventureSolvedByText;
 @property (readwrite,copy) UIImage *adventureImage;
+@property (readwrite,retain) NSArray *adventureSteps;
 
 - (id)initWithAdventureTitle:(NSString *)inAdventureTitle andAdventureLocation:(NSString *)inAdventureLocation 
-	 andAdventureSolvedByText:(NSString *)inadventureSolvedByText andAdventureImage:(UIImage *)inAdventureImage; 
+    andAdventureSolvedByText:(NSString *)inadventureSolvedByText andAdventureImage:(UIImage *)inAdventureImage;
 
-- (NSArray *) getAdventureSteps;
+- (id)initWithAdventureTitle:(NSString *)inAdventureTitle andAdventureLocation:(NSString *)inAdventureLocation 
+	 andAdventureSolvedByText:(NSString *)inadventureSolvedByText andAdventureImage:(UIImage *)inAdventureImage
+     andSteps: (NSArray*) steps; 
+
+- (NSString *)description;
 
 @end

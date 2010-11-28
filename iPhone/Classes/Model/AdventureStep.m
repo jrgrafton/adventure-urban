@@ -14,7 +14,6 @@
 @synthesize introductionText;
 @synthesize stepText;
 @synthesize answerText;
-@synthesize rewardImage;
 @synthesize summaryLeftText;
 @synthesize summaryRightText;
 
@@ -31,6 +30,7 @@
                                                           andAdventureSummaryRight: (NSString *) inAdventureSummaryRight
 {
 	if (self = [super init]) {
+        [self setStepType: STEP_INTRO];
 		[self setIntroductionText:inAdventureIntroduction];
 		[self setSummaryLeftText: inAdventureSummaryLeft];
 		[self setSummaryRightText:inAdventureSummaryRight];
@@ -42,6 +42,7 @@
 - (id)initAsStandardStep:(NSString *)inStepText
 {
 	if (self = [super init]) {
+        [self setStepType: STEP_STANDARD];
 		[self setStepText:inStepText];
 	}
 	
@@ -51,6 +52,7 @@
 - (id)initAsStandardStep:(NSString *)inStepText andAnswerText:(NSString *)inAnswerText
 {
 	if (self = [super init]) {
+        [self setStepType: STEP_STANDARD];
 		[self setStepText:inStepText];
 		[self setAnswerText:inAnswerText];
 	}
@@ -61,6 +63,7 @@
 - (id)initAsAudioRewardStep:(NSString *)inAudioResourceLocation
 {
 	if (self = [super init]) {
+        [self setStepType: STEP_REWARD_AUDIO];
         NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], inAudioResourceLocation]];
         
         NSError *error;
@@ -80,10 +83,22 @@
 {
 	if (self = [super init]) 
     {
+        [self setStepType: STEP_REWARD_MOVIE];
         NSLog(@"Video Loading / Playback Not Implemented");
 	}
 	
 	return self;    
+}
+
+- (id)initAsSummaryStep:(NSString *)inAdventureSummaryLeft andAdventureSummaryRight:(NSString*) inAdventureSummaryRight
+{
+	if (self = [super init]) {
+        [self setStepType: STEP_SUMMARY];
+		[self setSummaryLeftText: inAdventureSummaryLeft];
+		[self setSummaryRightText:inAdventureSummaryRight];
+	}
+	
+	return self;  
 }
 
 - (void) playAudio
@@ -91,11 +106,22 @@
     [audioPlayer play];
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat: @"StepType:%d, IntroText:%@\nStepText:%@\nAnswerText:%@\nSummaryLeft:%@\nSummaryRight\nAVPlayer:%@\n", 
+            stepType, 
+            introductionText,
+            stepText, 
+            answerText, 
+            summaryLeftText,
+            summaryRightText, 
+            audioPlayer];
+}
+
 - (void)dealloc {
     [introductionText release];
     [stepText release];
     [answerText release];
-    [rewardImage release];
     [summaryLeftText release];
     [summaryRightText release];
     [audioPlayer release];
