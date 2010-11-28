@@ -62,6 +62,13 @@ static NSInteger __currentAdventureStepNumber__;
 
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
+	//Add logo to nav bar
+	UIImage *image = [UIImage imageNamed: @"header.png"];
+	UIImageView *imageView = [[UIImageView alloc] initWithImage: image];
+	self.navigationItem.titleView = imageView;
+	[imageView release];
+	
+	self.navigationItem.title = @"Title";
 	
 	if (__currentAdventureStepNumber__ != 1) {
 		self.navigationItem.hidesBackButton = FALSE;
