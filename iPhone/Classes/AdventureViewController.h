@@ -8,15 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView-Extended.h"
-
-typedef enum StepType
-{
-	STEP_INTRO,
-	STEP_STANDARD,
-	STEP_REWARD_AUDIO,
-	STEP_REWARD_MOVIE,
-	STEP_SUMMARY
-} StepType;
+#import "AdventureStep.h"
 
 @interface AdventureViewController : UIViewController {
 	/* Intro Screen */
@@ -42,7 +34,8 @@ typedef enum StepType
 	IBOutlet UIButton *bigGreenButton;
 	
 	@private
-	AdventureViewController* nextStep;
+	AdventureViewController* nextStepController;
+    AdventureStep* step;
 }
 
 /* IB Actions */
@@ -51,20 +44,8 @@ typedef enum StepType
 - (IBAction)voucherClicked:(id)sender;
 - (IBAction)socialClicked:(id)sender;
 
-/* Properties */
+- (void)configureWithStep:(AdventureStep *)inAdventureStep 
+                           andWithNextStepController:(AdventureViewController *) inNextStep;
 
-/* Intro Screen */
-@property (assign,nonatomic) NSString *adventureSummary;
-
-/* Step  screen */
-@property (assign,nonatomic) NSString *stepTextString;
-@property (assign,nonatomic) NSString *answerText;
-
-/* All screens */
-@property (assign,nonatomic) StepType stepType;
-
-/* Configure for type assumes all neccessary info has already been set */
-/* This must be called before controller is pushed into view */
-- (void)configureForType:(StepType) inStepType;
 
 @end

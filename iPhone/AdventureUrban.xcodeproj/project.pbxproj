@@ -69,6 +69,8 @@
 		CECA3AE2128853F800DD2363 /* icon_todo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CECA3ADF128853F800DD2363 /* icon_todo@2x.png */; };
 		CED7333A1270E56300B049BF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CED733381270E56300B049BF /* icon.png */; };
 		CED7333B1270E56300B049BF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED733391270E56300B049BF /* icon@2x.png */; };
+		F95E3DE112A265E5005EB53E /* AdventureStep.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E3DE012A265E5005EB53E /* AdventureStep.m */; };
+		F95E3E5B12A277C5005EB53E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95E3E5A12A277C5005EB53E /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,7 +104,7 @@
 		3EFBE0EB123CF117008B7DC2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* AdventureUrban-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AdventureUrban-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		CE7338191297D81800250439 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		CE76B5B812A1EE070067015C /* Adventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adventures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE76B5B812A1EE070067015C /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE76B5F412A1F8C30067015C /* icon_adventures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_adventures.png; sourceTree = "<group>"; };
 		CE76B5F512A1F8C30067015C /* icon_adventures@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_adventures@2x.png"; sourceTree = "<group>"; };
 		CE76B5F612A1F8C30067015C /* icon_community.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_community.png; sourceTree = "<group>"; };
@@ -144,6 +146,9 @@
 		CECA3ADF128853F800DD2363 /* icon_todo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_todo@2x.png"; sourceTree = "<group>"; };
 		CED733381270E56300B049BF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Misc/icon.png; sourceTree = "<group>"; };
 		CED733391270E56300B049BF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Misc/icon@2x.png"; sourceTree = "<group>"; };
+		F95E3DDF12A265E5005EB53E /* AdventureStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdventureStep.h; sourceTree = "<group>"; };
+		F95E3DE012A265E5005EB53E /* AdventureStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdventureStep.m; sourceTree = "<group>"; };
+		F95E3E5A12A277C5005EB53E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +162,7 @@
 				3EB80E4C1235A50F00F74165 /* libsqlite3.0.dylib in Frameworks */,
 				3E34822D123A8E58009E0214 /* QuartzCore.framework in Frameworks */,
 				3EFBE0EC123CF117008B7DC2 /* SystemConfiguration.framework in Frameworks */,
+				F95E3E5B12A277C5005EB53E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +182,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE76B5B812A1EE070067015C /* Adventures.app */,
+				CE76B5B812A1EE070067015C /* Recipes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
 				3EB80E4B1235A50F00F74165 /* libsqlite3.0.dylib */,
 				3EFBE0EB123CF117008B7DC2 /* SystemConfiguration.framework */,
+				F95E3E5A12A277C5005EB53E /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,6 +241,8 @@
 				3EB5D56E1268AB4C009A80E0 /* AdventureUrbanAppDelegate.m */,
 				3EB5D56F1268AB4C009A80E0 /* UIImage-Extended.h */,
 				3EB5D5701268AB4C009A80E0 /* UIImage-Extended.m */,
+				F95E3DDF12A265E5005EB53E /* AdventureStep.h */,
+				F95E3DE012A265E5005EB53E /* AdventureStep.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -355,7 +364,7 @@
 			);
 			name = AdventureUrban;
 			productName = Shopper;
-			productReference = CE76B5B812A1EE070067015C /* Adventures.app */;
+			productReference = CE76B5B812A1EE070067015C /* Recipes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -453,6 +462,7 @@
 				3EB5D5841268AB4C009A80E0 /* UIImage-Extended.m in Sources */,
 				CE76B6CC12A2191B0067015C /* AdventureViewController.m in Sources */,
 				CE76B6F112A2238F0067015C /* UIView-Extended.m in Sources */,
+				F95E3DE112A265E5005EB53E /* AdventureStep.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,7 @@
 
 #import "AdventureViewController.h"
 
-
 @implementation AdventureViewController
-
-/* Intro Screen */
-@synthesize adventureSummary;
-
-/* Step  screen */
-@synthesize stepTextString;
-@synthesize answerText;
-
-/* All screens */
-@synthesize stepType;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -52,47 +41,59 @@
 }
 */
 
-- (void)configureForType:(StepType) inStepType {
+- (void)configureWithStep:(AdventureStep *)inAdventureStep 
+                          andWithNextStepController:(AdventureViewController *) inNextStep
+{
+    step = inAdventureStep;
+    [step retain];
+    nextStepController = inNextStep;
+    [nextStepController retain];
+    
 	UIImage *loadedImage;
 	
-	switch (inStepType) {
-				
-			case STEP_INTRO:
-				[adventureIntroduction setText:adventureSummary];
-				[adventureIntroduction setHidden:NO];
-				[adventureSummaryLeft setHidden:NO];
-				[adventureSummaryRight setHidden:NO];
-				[smallStartButton setHidden:NO];
-				[bigGreenButton setTitle:@"Start" forState:UIControlStateNormal];
-				break;
-			case STEP_STANDARD:
-				[stepText setText:stepTextString];
-				[stepText setHidden:NO];
-				[answerInput setHidden:NO];
-				[bigGreenButton setTitle:@"Next" forState:UIControlStateNormal];
-				break;
-			case STEP_REWARD_AUDIO:
-				loadedImage = [UIImage imageNamed: @"reward_audio.png"];
-				[rewardImage setImage:loadedImage];
-				[rewardImage setHidden:NO];
-				[bigGreenButton setTitle:@"Thanks!" forState:UIControlStateNormal];
-				break;
-			case STEP_REWARD_MOVIE:
-				loadedImage = [UIImage imageNamed: @"reward_movie.png"];
-				[rewardImage setImage:loadedImage];
-				[rewardImage setHidden:NO];
-				[bigGreenButton setTitle:@"Thanks!" forState:UIControlStateNormal];
-				break;
-			case STEP_SUMMARY:
-				[summaryTextLeft setHidden:NO];
-				[summaryTextRight setHidden:NO];
-				[socialButton setHidden:NO];
-				[voucherButton setHidden:NO];
-				[bigGreenButton setTitle:@"Finish" forState:UIControlStateNormal];
-				break;
-			default:
-				break;
-		}
+	switch (step.stepType) {
+        case STEP_INTRO:
+            [adventureIntroduction setText:step.introductionText];
+            [adventureIntroduction setHidden:NO];
+            [adventureSummaryLeft setText:step.summaryLeftText];
+            [adventureSummaryLeft setHidden:NO];
+            [adventureSummaryRight setText:step.summaryRightText];
+            [adventureSummaryRight setHidden:NO];
+            [smallStartButton setHidden:NO];
+            [bigGreenButton setTitle:@"Start" forState:UIControlStateNormal];
+            break;
+        case STEP_STANDARD:
+            [stepText setText:step.stepText];
+            [stepText setHidden:NO];
+            [stepText setText:step.answerText];
+            [answerInput setHidden:NO];
+            [bigGreenButton setTitle:@"Next" forState:UIControlStateNormal];
+            break;
+        case STEP_REWARD_AUDIO:
+            loadedImage = [UIImage imageNamed: @"reward_audio.png"];
+            [rewardImage setImage:loadedImage];
+            [rewardImage setHidden:NO];
+            [bigGreenButton setTitle:@"Thanks!" forState:UIControlStateNormal];
+            break;
+        case STEP_REWARD_MOVIE:
+            loadedImage = [UIImage imageNamed: @"reward_movie.png"];
+            [rewardImage setImage:loadedImage];
+            [rewardImage setHidden:NO];
+            /*TODO: Load video controller here */
+            [bigGreenButton setTitle:@"Thanks!" forState:UIControlStateNormal];
+            break;
+        case STEP_SUMMARY:
+            [summaryTextLeft setText:step.summaryLeftText];
+            [summaryTextLeft setHidden:NO];
+            [summaryTextRight setText:step.summaryRightText];
+            [summaryTextRight setHidden:NO];
+            [socialButton setHidden:NO];
+            [voucherButton setHidden:NO];
+            [bigGreenButton setTitle:@"Finish" forState:UIControlStateNormal];
+            break;
+        default:
+            break;
+    }
 	
 }
 
