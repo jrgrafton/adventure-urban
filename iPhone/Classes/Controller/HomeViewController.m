@@ -10,6 +10,7 @@
 #import "AdventureUrbanAppDelegate.h"
 #import "Adventure.h"
 #import "UITableViewCellFactory.h"
+#import "DataManager.h"
 
 @interface HomeViewController()
 - (void)notAvailable;
@@ -23,6 +24,8 @@
 	[super viewDidLoad];
 	
 	//init adventures
+	datamanager = [DataManager getInstance];
+	[datamanager loadAdventures:[[NSBundle mainBundle] pathForResource:@"adventures" ofType:@"json"]];
 	
 	/* Nearby Adventures */
 	nearbyAdventures = [[NSMutableArray alloc] initWithCapacity:2];

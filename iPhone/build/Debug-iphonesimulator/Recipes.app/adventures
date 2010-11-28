@@ -1,0 +1,39 @@
+{
+"Adventures":
+[
+{
+"adventureTitle": "Churchills Legacy",
+"adventureLocation": "Location: London, UK",
+"adventureSolvedByText": "Solved By: 90",
+"adventureImage": "churchill_adventure.png",
+"adventureSteps":
+[
+{
+"stepType": 0,
+"adventureIntroduction":"Hey this is an introduction!!",
+},
+{
+"stepType": 1,
+"stepTextString": "Test step text string",
+"answerText": "SECRET"
+},
+{
+"stepType": 3,
+"resourceName": "speech.mp3"
+},
+{
+"stepType": 1,
+"stepTextString": "Test step text string TWO",
+"answerText": "SS"
+},
+{
+"stepType": 4,
+"resourceName": "movie.mpg"
+},
+{
+"stepType": 5
+}
+]
+}
+]
+}

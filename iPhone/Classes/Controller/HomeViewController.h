@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AdventureViewController.h"
+#import "DataManager.h"
 
 @interface HomeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
 	IBOutlet UITableView *adventuresView;
@@ -16,6 +17,7 @@
 	NSMutableArray *nearbyAdventures;
 	NSMutableArray *popularAdventures;
 	AdventureViewController *adventureViewController;
+	DataManager *datamanager;
 }
 
 @property (nonatomic, retain) AdventureViewController *adventureViewController;
