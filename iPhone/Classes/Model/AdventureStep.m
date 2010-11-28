@@ -101,9 +101,23 @@
 	return self;  
 }
 
+- (id)initAsStepText:(NSString *)inStepText
+{
+    if (self = [super init]) {
+        [self setStepType: STEP_TEXT];
+        [self setStepText:inStepText];
+    }
+    return self;
+}
+
 - (void) playAudio
 {  
     [audioPlayer play];
+}
+
+- (void) stopAudio
+{
+    [audioPlayer stop];
 }
 
 - (NSString *)description

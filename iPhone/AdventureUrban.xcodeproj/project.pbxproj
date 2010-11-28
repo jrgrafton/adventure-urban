@@ -79,6 +79,13 @@
 		F95E3E7E12A27A53005EB53E /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E3E7712A27A53005EB53E /* SBJsonParser.m */; };
 		F95E3E7F12A27A53005EB53E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F95E3E7912A27A53005EB53E /* SBJsonWriter.m */; };
 		F9CDD0A712A290A10007DA58 /* AdventureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD0A612A290A10007DA58 /* AdventureView.xib */; };
+		F9CDD0F012A291EB0007DA58 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD0E512A291EB0007DA58 /* FBDialog.bundle */; };
+		F9CDD0F212A291EB0007DA58 /* FBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD0E912A291EB0007DA58 /* FBRequest.m */; };
+		F9CDD0F312A291EB0007DA58 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD0EA12A291EB0007DA58 /* Facebook.m */; };
+		F9CDD0F412A291EB0007DA58 /* FBLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD0ED12A291EB0007DA58 /* FBLoginDialog.m */; };
+		F9CDD0F512A291EB0007DA58 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD0EF12A291EB0007DA58 /* FBDialog.m */; };
+		F9CDD17D12A29CCD0007DA58 /* speech.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F9CDD17C12A29CCD0007DA58 /* speech.mp3 */; };
+		F9CDD23B12A2AE630007DA58 /* FBIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CDD23A12A2AE630007DA58 /* FBIntegration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,7 +119,7 @@
 		3EFBE0EB123CF117008B7DC2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* AdventureUrban-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AdventureUrban-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		CE7338191297D81800250439 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		CE76B5B812A1EE070067015C /* Adventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adventures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE76B5B812A1EE070067015C /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE76B5F412A1F8C30067015C /* icon_adventures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_adventures.png; sourceTree = "<group>"; };
 		CE76B5F512A1F8C30067015C /* icon_adventures@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_adventures@2x.png"; sourceTree = "<group>"; };
 		CE76B5F612A1F8C30067015C /* icon_community.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_community.png; sourceTree = "<group>"; };
@@ -173,6 +180,19 @@
 		F95E3E7812A27A53005EB53E /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		F95E3E7912A27A53005EB53E /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		F9CDD0A612A290A10007DA58 /* AdventureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdventureView.xib; sourceTree = "<group>"; };
+		F9CDD0E512A291EB0007DA58 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBDialog.bundle; path = Classes/FBConnect/FBDialog.bundle; sourceTree = "<group>"; };
+		F9CDD0E712A291EB0007DA58 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBConnect.h; path = Classes/FBConnect/FBConnect.h; sourceTree = "<group>"; };
+		F9CDD0E812A291EB0007DA58 /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBRequest.h; path = Classes/FBConnect/FBRequest.h; sourceTree = "<group>"; };
+		F9CDD0E912A291EB0007DA58 /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBRequest.m; path = Classes/FBConnect/FBRequest.m; sourceTree = "<group>"; };
+		F9CDD0EA12A291EB0007DA58 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Facebook.m; path = Classes/FBConnect/Facebook.m; sourceTree = "<group>"; };
+		F9CDD0EB12A291EB0007DA58 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Facebook.h; path = Classes/FBConnect/Facebook.h; sourceTree = "<group>"; };
+		F9CDD0EC12A291EB0007DA58 /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBLoginDialog.h; path = Classes/FBConnect/FBLoginDialog.h; sourceTree = "<group>"; };
+		F9CDD0ED12A291EB0007DA58 /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBLoginDialog.m; path = Classes/FBConnect/FBLoginDialog.m; sourceTree = "<group>"; };
+		F9CDD0EE12A291EB0007DA58 /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBDialog.h; path = Classes/FBConnect/FBDialog.h; sourceTree = "<group>"; };
+		F9CDD0EF12A291EB0007DA58 /* FBDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBDialog.m; path = Classes/FBConnect/FBDialog.m; sourceTree = "<group>"; };
+		F9CDD17C12A29CCD0007DA58 /* speech.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = speech.mp3; path = audio/speech.mp3; sourceTree = "<group>"; };
+		F9CDD23912A2AE630007DA58 /* FBIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBIntegration.h; path = Classes/FBIntegration.h; sourceTree = "<group>"; };
+		F9CDD23A12A2AE630007DA58 /* FBIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBIntegration.m; path = Classes/FBIntegration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +226,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE76B5B812A1EE070067015C /* Adventures.app */,
+				CE76B5B812A1EE070067015C /* Recipes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,6 +246,9 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F9CDD23912A2AE630007DA58 /* FBIntegration.h */,
+				F9CDD23A12A2AE630007DA58 /* FBIntegration.m */,
+				F9CDD0E412A291EB0007DA58 /* FBConnect */,
 				F95E3E6C12A27A53005EB53E /* JSON */,
 				28A0AB4B0D9B1048005BE974 /* AdventureUrban_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
@@ -236,6 +259,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F9CDD17A12A29CB10007DA58 /* audio */,
 				CE7D9C7012A26CA0001245EB /* adventures.json */,
 				CE7338191297D81800250439 /* iTunesArtwork */,
 				3EB5D6741268ABBB009A80E0 /* images */,
@@ -396,6 +420,31 @@
 			path = Classes/JSON;
 			sourceTree = "<group>";
 		};
+		F9CDD0E412A291EB0007DA58 /* FBConnect */ = {
+			isa = PBXGroup;
+			children = (
+				F9CDD0E512A291EB0007DA58 /* FBDialog.bundle */,
+				F9CDD0E712A291EB0007DA58 /* FBConnect.h */,
+				F9CDD0E812A291EB0007DA58 /* FBRequest.h */,
+				F9CDD0E912A291EB0007DA58 /* FBRequest.m */,
+				F9CDD0EA12A291EB0007DA58 /* Facebook.m */,
+				F9CDD0EB12A291EB0007DA58 /* Facebook.h */,
+				F9CDD0EC12A291EB0007DA58 /* FBLoginDialog.h */,
+				F9CDD0ED12A291EB0007DA58 /* FBLoginDialog.m */,
+				F9CDD0EE12A291EB0007DA58 /* FBDialog.h */,
+				F9CDD0EF12A291EB0007DA58 /* FBDialog.m */,
+			);
+			name = FBConnect;
+			sourceTree = "<group>";
+		};
+		F9CDD17A12A29CB10007DA58 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				F9CDD17C12A29CCD0007DA58 /* speech.mp3 */,
+			);
+			name = audio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -413,7 +462,7 @@
 			);
 			name = AdventureUrban;
 			productName = Shopper;
-			productReference = CE76B5B812A1EE070067015C /* Adventures.app */;
+			productReference = CE76B5B812A1EE070067015C /* Recipes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -494,6 +543,8 @@
 				CE76B6EE12A221AB0067015C /* voucher@2x.png in Resources */,
 				CE7D9C7112A26CA0001245EB /* adventures.json in Resources */,
 				F9CDD0A712A290A10007DA58 /* AdventureView.xib in Resources */,
+				F9CDD0F012A291EB0007DA58 /* FBDialog.bundle in Resources */,
+				F9CDD17D12A29CCD0007DA58 /* speech.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +571,11 @@
 				F95E3E7D12A27A53005EB53E /* SBJsonBase.m in Sources */,
 				F95E3E7E12A27A53005EB53E /* SBJsonParser.m in Sources */,
 				F95E3E7F12A27A53005EB53E /* SBJsonWriter.m in Sources */,
+				F9CDD0F212A291EB0007DA58 /* FBRequest.m in Sources */,
+				F9CDD0F312A291EB0007DA58 /* Facebook.m in Sources */,
+				F9CDD0F412A291EB0007DA58 /* FBLoginDialog.m in Sources */,
+				F9CDD0F512A291EB0007DA58 /* FBDialog.m in Sources */,
+				F9CDD23B12A2AE630007DA58 /* FBIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

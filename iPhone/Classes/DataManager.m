@@ -114,6 +114,9 @@ static DataManager *sharedInstance = nil;
                                 step = [[AdventureStep alloc] initAsSummaryStep: [stepDict objectForKey:@"summaryLeft"]
                                                        andAdventureSummaryRight: [stepDict objectForKey:@"summaryRight"]];
                                 break;                                
+                            case STEP_TEXT:
+                                step = [[AdventureStep alloc] initAsStepText: [stepDict objectForKey:@"stepTextString"]];
+                                break;                                
                             default:
                                 NSLog(@"Unknown step type: %@", stepType);
                                 break;

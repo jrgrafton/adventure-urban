@@ -16,7 +16,8 @@ typedef enum StepType
 	STEP_STANDARD,
 	STEP_REWARD_AUDIO,
 	STEP_REWARD_MOVIE,
-	STEP_SUMMARY
+	STEP_SUMMARY,
+    STEP_TEXT
 } StepType;
 
 @interface AdventureStep : NSObject {
@@ -46,8 +47,10 @@ typedef enum StepType
 - (id)initAsSummaryStep:(NSString *)inAdventureSummaryLeft andAdventureSummaryRight:(NSString*) inAdventureSummaryRight;
 - (id)initAsAudioRewardStep:(NSString *)inAudioResourceLocation;
 - (id)initAsVideoRewardStep:(NSString *)inVideoResourceLocation;
+- (id)initAsStepText:(NSString *)inStepText;
 
 - (void)playAudio;
+- (void)stopAudio;
 
 - (NSString *)description;
 

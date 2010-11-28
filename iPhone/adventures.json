@@ -8,12 +8,17 @@
             "adventureSteps": [
                 {
                     "stepType": 0,
-                    "adventureIntroduction": "Hey this is an introduction!!" 
+                    "adventureIntroduction": "Many people do not know that within the PayPal offices there are a series of hitherto unknown portals that will enable you to visit some of the venues that played host to Churchill’s greatest moments. This adventure will let you explore the secret world from which Churchill and his government conducted their victorious war effort.\n\n'I never worry about action, but only about inaction' – Winston Churchill\n\nLet get started!!\n\nHead East to the Churchill’s War Rooms which you will find next to the red telephone boxes." 
                 },
                 {
                     "stepType": 1,
-                    "stepTextString": "Test step text string",
-                    "answerText": "SECRET" 
+                    "stepTextString": "On becoming Prime Minister in May 1940, Winston Churchill visited this underground War Cabinet Room and said, 'This is a room from which I will direct the war'. The Cabinet War Rooms sheltered the heart of British military and government command throughout the Second World War, before being sealed in August 1945. The walls are padded to block the noise of the bombs raining down outside.\n\nHow many full squares with flowers on them are there?",
+                    "answerText": "22" 
+                },
+                {
+                    "stepType": 1,
+                    "stepTextString": "'Difficulties mastered are opportunities won' – Winston Churchill\n\nNow head out and turn right to visit the Houses of Parliament where Churchill made some of his greatest speeches.\nPerhaps the greatest speech Churchill ever delivered and possibly the greatest wartime speech in history occurred here on June 4, 1940. It followed the disastrous defeat and miraculous evacuation of British forces from Dunkirk. Churchill needed to send a clear message to the entire world that there would be no British surrender.\n\nTo hear the speech answer how many bears are there sitting in seats of the opposition?",
+                    "answerText": "19" 
                 },
                 {
                     "stepType": 2,
@@ -21,12 +26,21 @@
                 },
                 {
                     "stepType": 1,
-                    "stepTextString": "Test step text string TWO",
-                    "answerText": "SS" 
+                    "stepTextString": "'Success is not final, failure is not fatal: it is the courage to continue that counts.' – Winston Churchill\n\nNow head out and turn right to where we will enter Churchill’s secret bunker.\n\n1944 Known as the ‘Paddock’ this hidden room was Churchill’s most secret bunker. In the middle of the room Churchill’s desk still remains. It is testament to his indomitable bravery that he only felt the need to hold a cabinet meeting here once. But, that was not enough to prevent him leaving his mark. Have a look underneath and see where he carved his name.\n\nWhat is the year?",
+                    "answerText": "1944" 
                 },
                 {
                     "stepType": 3,
                     "resourceName": "movie.mpg" 
+                },
+                {
+                    "stepType": 1,
+                    "stepTextString": "'It is a mistake to look too far ahead. Only one link in the chain of destiny can be handled at a time.' – Winston Churchill\n\nNow leave the bunker and pass through the Mission Control room to enter the Operations centre.\n\nThis room was the very nerve centre of Churchill’s war effort. It would have been a scene of intense activity amongst his top staff. Here you can see the red and black battle desk where you view how Churchill decided he was going to defeat the Germans with a 3-4-2 formation.\n\nHow many red troops are there on the battle field?",
+                    "answerText": "10" 
+                },
+                {
+                    "stepType": 5,
+                    "stepTextString": "You have displayed a fantastic effort.\n\n'However beautiful the strategy, you should occasionally look at the results.' – Winston Churchill\n\nA great effort deserves a great reward. Now head back west to Churchill’s favourite retreat – Whittaker’s Bar.\n\nYou are now in Whittaker’s Bar where Churchill would spend many a late evening spouting witticisms whilst chomping on a large cigar.  You too can now relax as you have completed your adventure. Relax and soak up the atmosphere. As a reward please accept this special discount voucher.\n\n'If you have an important point to make, don't try to be subtle or clever. Use a pile driver. Hit the point once. Then come back and hit it again. Then hit it a third time - a tremendous whack.' – Winston Churchill"
                 },
                 {
                     "stepType": 4 

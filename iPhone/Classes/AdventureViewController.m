@@ -8,6 +8,7 @@
 
 #import "AdventureViewController.h"
 #import "AdventureUrbanAppDelegate.h"
+#import "FBIntegration.h"
 
 /* Static class fields */
 static NSArray* __currentAdventureSteps__;
@@ -93,6 +94,17 @@ static NSInteger __currentAdventureStepNumber__;
             [answerInput setHidden:NO];
             [bigGreenButton setTitle:@"Next" forState:UIControlStateNormal];
             break;
+        case STEP_TEXT:
+			[adventureIntroduction setHidden:YES];
+			[adventureSummaryLeft setHidden:YES];
+			[adventureSummaryRight setHidden:YES];
+			
+            [stepText setText:[__currentAdventureStep__ stepText]];
+			[stepText alignTop];
+            [stepText setHidden:NO];
+            [answerInput setHidden:YES];
+            [bigGreenButton setTitle:@"Next" forState:UIControlStateNormal];
+            break;
         case STEP_REWARD_AUDIO:
             loadedImage = [UIImage imageNamed: @"reward_audio.png"];
             [rewardImage setImage:loadedImage];
@@ -143,6 +155,14 @@ static NSInteger __currentAdventureStepNumber__;
 }
 
 - (IBAction)bigGreenPressed:(id)sender{
+
+ 	switch ([__currentAdventureStep__ stepType]) {
+        case STEP_REWARD_AUDIO:
+            [__currentAdventureStep__ stopAudio];
+            break;
+        default:break;
+    }
+    
 	__currentAdventureStepNumber__++;
     if ( __currentAdventureStepNumber__ < [__currentAdventureSteps__ count] )
     {
@@ -153,6 +173,7 @@ static NSInteger __currentAdventureStepNumber__;
 				UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Buffoonery" message:@"We shall never overcome with answers such as that!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
 				[successAlert show];
 				[successAlert release];
+                __currentAdventureStepNumber__--;
 				return;
 			}
 		}
@@ -184,7 +205,11 @@ static NSInteger __currentAdventureStepNumber__;
 }
 
 
-- (IBAction)socialClicked:(id)sender{}
+- (IBAction)socialClicked:(id)sender
+{
+    FBIntegration *fb_stuff = [[FBIntegration alloc] initWithAdventureTitle: @"Churchill Legacy"];
+    [fb_stuff publishToFeed];
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
