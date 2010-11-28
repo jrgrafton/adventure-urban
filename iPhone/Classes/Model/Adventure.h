@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "AdventureStep.h"
 
 @interface Adventure : NSObject {
 
@@ -20,5 +20,7 @@
 
 - (id)initWithAdventureTitle:(NSString *)inAdventureTitle andAdventureLocation:(NSString *)inAdventureLocation 
 	 andAdventureSolvedByText:(NSString *)inadventureSolvedByText andAdventureImage:(UIImage *)inAdventureImage; 
+
+- (NSArray *) getAdventureSteps;
 
 @end
