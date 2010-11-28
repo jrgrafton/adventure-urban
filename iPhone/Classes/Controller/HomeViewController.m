@@ -86,8 +86,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString *CellIdentifier;
 	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	
 	/* Create a cell for this row's product */
 	Adventure* adventure;
 	
@@ -98,6 +96,8 @@
 		CellIdentifier = ([indexPath row] == 0)? @"PopularAdventureCellHeader":@"PopularAdventureCell";
 		adventure = [popularAdventures objectAtIndex:[indexPath row]];
 	}
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
 	[UITableViewCellFactory createAdventureTableCell:&cell withIdentifier:CellIdentifier withAdventure:(Adventure *)adventure isHeader:([indexPath row] == 0)];
 	
